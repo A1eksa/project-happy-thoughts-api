@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.8.3",
+    "@babel/helper-compilation-targets": "^7.16.7",
     "@babel/node": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "cors": "^2.8.5",
@@ -19,6 +20,7 @@
     "nodemon": "^2.0.2"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-static-block": "^7.16.7",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
