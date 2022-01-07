@@ -45,33 +45,33 @@ app.get('/thoughts', async (req, res) => {
   res.json(thoughtsList);
 });
 
-app.post('/thoughts', async (req, res) => {
-  const { message } = req.body;
+// app.post('/thoughts', async (req, res) => {
+//   const { message } = req.body;
 
-  try {
-    const newThought = await new Thought({ message }).save();
-    res.status(201).json({ response: newThought, success: true });
-  } catch (error) {
-    res.status(400).json({ response: error, success: false });
-  }
-});
+//   try {
+//     const newThought = await new Thought({ message }).save();
+//     res.status(201).json({ response: newThought, success: true });
+//   } catch (error) {
+//     res.status(400).json({ response: 'this is error', success: false });
+//   }
+// });
 
-app.post('/thoughts/:thoughtId/like', async (req, res) => {
-  const { id } = req.params;
+// app.post('/thoughts/:thoughtId/like', async (req, res) => {
+//   const { id } = req.params;
 
-  try {
-    const updateLike = await Thought.findByIdAndUpdate(id, {
-      $inc: { hearts: 1 },
-    });
-    if (updateLike) {
-      res.status(200).json({ response: updateLike, success: true });
-    } else {
-      res.status(404).json({ response: 'Not found', success: false });
-    }
-  } catch (error) {
-    res.status(400).json({ response: error, success: false });
-  }
-});
+//   try {
+//     const updateLike = await Thought.findByIdAndUpdate(id, {
+//       $inc: { hearts: 1 },
+//     });
+//     if (updateLike) {
+//       res.status(200).json({ response: updateLike, success: true });
+//     } else {
+//       res.status(404).json({ response: 'Not found', success: false });
+//     }
+//   } catch (error) {
+//     res.status(400).json({ response: error, success: false });
+//   }
+// });
 
 // Start the server
 app.listen(port, () => {
