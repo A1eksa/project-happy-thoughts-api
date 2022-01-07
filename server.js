@@ -73,23 +73,6 @@ app.post('/thoughts/:id/like', async (req, res) => {
   }
 });
 
-// app.post('/thoughts/:id/like', async (req, res) => {
-//   const { id } = req.params;
-
-//   try {
-//     const updatedThought = await Thought.findByIdAndUpdate(
-//       id,
-//       {
-//         $inc: { like: 1 },
-//       },
-//       { new: true }
-//     );
-//     res.status(200).json(updatedThought);
-//   } catch (error) {
-//     res.status(400).json({ response: error, success: false });
-//   }
-// });
-
 app.post('/thoughts/:id/like', async (req, res) => {
   const { id } = req.params;
 
