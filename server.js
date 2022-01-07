@@ -56,40 +56,6 @@ app.post('/thoughts', async (req, res) => {
   }
 });
 
-// app.post('/thoughts/:id/like', async (req, res) => {
-//   const { id } = req.params;
-
-//   try {
-//     const updateLike = await Thought.findByIdAndUpdate(id, {
-//       $inc: { like: 1 },
-//     });
-//     if (updateLike) {
-//       res.status(200).json({ response: updateLike, success: true });
-//     } else {
-//       res.status(404).json({ response: 'Not found', success: false });
-//     }
-//   } catch (error) {
-//     res.status(400).json({ response: error, success: false });
-//   }
-// });
-
-// app.post('/thoughts/:id/like', async (req, res) => {
-//   const { id } = req.params;
-
-//   try {
-//     const updateLike = await Thought.findByIdAndUpdate(id, {
-//       $inc: { like: 1 },
-//     });
-//     if (updateLike) {
-//       res.status(200).json({ response: updateLike, success: true });
-//     } else {
-//       res.status(404).json({ response: 'Not found', success: false });
-//     }
-//   } catch (error) {
-//     res.status(400).json({ response: error, success: false });
-//   }
-// });
-
 app.post('/thoughts/:id/like', async (req, res) => {
   const { id } = req.params;
 
